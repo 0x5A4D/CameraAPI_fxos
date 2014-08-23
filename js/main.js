@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     
     var camera = null;
+    var cameraType = null;
     var idx = 0;
 
     function onSuccess(CameraControl) {
@@ -65,8 +66,12 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // カメラ開始
     if(CameraManager){
-        var cameraType = CameraManager.getListOfCameras()[0];
-        getCamera();
+        try{
+            cameraType = CameraManager.getListOfCameras()[0];
+            getCamera();
+        }catch(e){
+            console.log(e);
+        }
     }
 
     // 終了時に解放
@@ -127,7 +132,7 @@ var processor = {
         
         var w = this.width / 2;
         var h = this.height / 2;
-        this.ctx2.drawImage(this.video, 0, 0, w, h, w, h, w, h);
+        this.ctx2.drawImage(this.c1, 0, 0, w, h, w, h, w, h);
         this.ctx2.drawImage(this.c1, w, h, w, h, 0, 0, w, h);
         this.ctx2.drawImage(this.c1, w, 0, w, h, 0, h, w, h);
         this.ctx2.drawImage(this.c1, 0, h, w, h, w, 0, w, h);
