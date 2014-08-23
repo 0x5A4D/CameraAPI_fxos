@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     // カメラ開始
-    if(CameraManager && false){
+    if(CameraManager){
         var cameraType = CameraManager.getListOfCameras()[0];
         getCamera();
     }
