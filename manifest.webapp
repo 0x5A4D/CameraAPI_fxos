@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "name": "Camera Demo",
+  "description": "Camera API and Canvas",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/mortar-16.png",
+    "48": "/img/icons/mortar-48.png",
+    "60": "/img/icons/mortar-60.png",
+    "128": "/img/icons/mortar-128.png"
+  },
+  "developer": {
+    "name": "0x5A4D",
+    "url": ""
+  },
+  "installs_allowed_from": ["*"],
+  "permissions": {
+        "video-capture": {},
+        "camera": {}
+  },
+  "locales": {
+    "ja": {
+      "description": "Cameraの動作確認デモアプリです。"
+    }
+  },
+  "default_locale": "en",
+  "type": "certified"
+}
